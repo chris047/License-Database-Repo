@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="LicenseDatabaseManagerV2.UserControlDataEntryFilesList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LicenseDatabaseManagerV2"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" Width="Auto">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <UniformGrid Grid.Row="0" Name="UniformFileList" Columns="1">
+
+
+
+
+
+
+        </UniformGrid>
+        <Button Name ="Search" Height="30" Width="150" Background="Gray" Click="AddFile_OnClick" Grid.Row="1"
+                HorizontalAlignment="Left" VerticalAlignment="Top">
+            <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="150"  Margin="-35" Background="Gray">
+                <materialDesign:PackIcon Kind="AccountPlus" Width="30" Height="30" Foreground="Black"/>
+                <Label Name="AddButtonLabel" FontSize="14"></Label>
+            </WrapPanel>
+        </Button>
+    </Grid>
+    
+</UserControl>

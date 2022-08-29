@@ -1,0 +1,94 @@
+﻿<UserControl x:Class="LicenseDatabaseManagerV2.UserControlFullPreviewItemAddition"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+              xmlns:local="clr-namespace:LicenseDatabaseManagerV2"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" Width="Auto">
+    <Grid Background="LightSteelBlue" ShowGridLines="True" Name="PreviewEditGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Row="0" Name="UniqueIdGrid">
+
+        </Grid>
+        <Grid Row="1" Name="Row1" IsEnabled="False">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Row="0" Name="SectionTitle1" HorizontalAlignment="Left">
+
+            </Grid>
+            <UniformGrid Grid.Row="1" x:Name="Info1" Columns="2" HorizontalAlignment="Left">
+
+            </UniformGrid>
+        </Grid>
+        <Grid Row="2" Name="Row2" IsEnabled="False">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Row="0" Name="SectionTitle2" HorizontalAlignment="Left">
+
+            </Grid>
+            <UniformGrid Grid.Row="1" x:Name="Info2" Columns="2" HorizontalAlignment="Left">
+
+            </UniformGrid>
+        </Grid>
+        <Grid Row="3" Name="Row3" IsEnabled="False">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Row="0" Name="SectionTitle3" HorizontalAlignment="Left">
+
+            </Grid>
+            <UniformGrid Grid.Row="1" x:Name="Info3" Columns="2" HorizontalAlignment="Left">
+
+            </UniformGrid>
+        </Grid>
+
+        <Grid Row="4" Name="Row4" IsEnabled="False">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Row="0" Name="SectionTitle4" HorizontalAlignment="Left">
+
+            </Grid>
+            <UniformGrid Grid.Row="1" x:Name="Info4" Columns="2" HorizontalAlignment="Left">
+
+            </UniformGrid>
+
+        </Grid>
+
+
+        <Button Grid.Row="5" Name="AddItem" Height="30" Width="150" Background="Gray" Click="Add_OnClickItem_Click" HorizontalAlignment="Left" Margin="20,10,10,10"
+                IsEnabled="False">
+            <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="150" Margin="-15">
+                <materialDesign:PackIcon Name="AddItemIcon" Kind="AccountPlus" Width="30" Height="30" Foreground="Black"/>
+                <Label Name="AddItemLabel" FontSize="15" Foreground="Black">Add Entry</Label>
+            </WrapPanel>
+        </Button>
+        <Button Grid.Row="5" Name="RemoveItem" Height="30" Width="150" Background="Gray"  IsEnabled="False"  Click="Delete_OnClickItem_Click" HorizontalAlignment="Left" 
+                Margin="265,10,10,10">
+            <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="150" Margin="-15">
+                <materialDesign:PackIcon Kind="Delete" Width="30" Height="30" Foreground="Black"/>
+                <Label FontSize="15" Foreground="Black">Remove Entry</Label>
+            </WrapPanel>
+        </Button>
+
+
+
+    </Grid>
+
+
+</UserControl>

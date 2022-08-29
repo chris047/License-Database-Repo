@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="LicenseDatabaseManagerV2.UserControlPreviewLabelsSubItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LicenseDatabaseManagerV2"
+             mc:Ignorable="d" Width="Auto">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Viewbox Grid.Column="0" MaxHeight="30">
+            <Label  x:Name="Var1Label" Width ="90"  Height="30" Content="{Binding Path=VarName}" VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12"></Label>
+        </Viewbox>
+        <Viewbox Grid.Column="1" MaxHeight="30">
+            <Label x:Name="Var1Value" Content="{Binding Path=VarValue, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Height="30" VerticalAlignment="Center" HorizontalAlignment="Left"
+                   HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12"></Label>
+        </Viewbox>
+       
+            <!-- Chose to keep second part a textBox in case client wants to copy and paste the values to other parts of program-->
+            <!-- Can be easily made a label again without much issue-->
+    </Grid>
+</UserControl>
